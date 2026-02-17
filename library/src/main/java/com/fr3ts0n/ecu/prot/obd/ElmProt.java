@@ -133,6 +133,7 @@ public class ElmProt
 		PROMPT(">"),
 		OK("OK"),
 		MODEL("ELM"),
+		MODEL_OBD("OBD"),
 		NODATA("NODATA"),
 		SEARCH("SEARCHING"),
 		ERROR("ERROR"),
@@ -708,6 +709,7 @@ public class ElmProt
 				cmdQueue.add(String.valueOf(lastCommand));
 				break;
 
+			case MODEL_OBD:
 			case MODEL:
 				lastRxMsg = bufferStr;
 				initialize();
@@ -770,6 +772,7 @@ public class ElmProt
 						pushCommand(CMD.SETPROT, preferredProtocol.ordinal());
 						// NO break here since reaction is only quqeued
 					
+					case MODEL_OBD:
 					case MODEL:
 					case SEARCH:
 					case STOPPED:
