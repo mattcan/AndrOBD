@@ -709,6 +709,7 @@ public class ElmProt
 				break;
 
 			case MODEL:
+				lastRxMsg = bufferStr;
 				initialize();
 				break;
 			
