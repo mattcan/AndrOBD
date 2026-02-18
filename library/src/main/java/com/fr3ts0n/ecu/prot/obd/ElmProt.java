@@ -711,7 +711,6 @@ public class ElmProt
 
 			case MODEL_OBD:
 			case MODEL:
-				lastRxMsg = bufferStr;
 				initialize();
 				break;
 			
